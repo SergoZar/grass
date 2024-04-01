@@ -13,7 +13,7 @@ from core.utils.session import BaseClient
 try:
     from data.config import REF_CODE
 except ImportError:
-    REF_CODE = ""
+    REF_CODE = "wauIxNnUeev4RCg"
 
 
 class GrassRest(BaseClient):
@@ -185,6 +185,8 @@ class GrassRest(BaseClient):
         return device_info['data']['final_score']
 
     async def get_json_params(self, params, user_referral: str = "wauIxNnUeev4RCg", main_referral: str = "wauIxNnUeev4RCg",  role_stable: str = "726566657272616c"):
+        print("Referal Code: ", user_referral)
+        
         self.username = Person().username
 
         referrals = {
